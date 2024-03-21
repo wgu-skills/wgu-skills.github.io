@@ -37,7 +37,7 @@ export default function Example() {
 				<Logo className='m-0 text-stone-900 cursor-pointer' />
 			</div>
 			<div className='shrink-0 text-white p-1'>
-				Open Source Management Toolkit
+				Skills Registry
 			</div>
 			<div className='grow'></div>
 			<div className='grow'>
