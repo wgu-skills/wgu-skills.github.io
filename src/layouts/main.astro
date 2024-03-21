@@ -2,19 +2,19 @@
 import Navbar from '../components/Navbar';
 const { title, content } = Astro.props;
 ---
-<html lang="en">
+
+<html lang='en'>
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
 		<title>{title}</title>
 	</head>
 	<body>
-		<Navbar client:load/>
-		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-			<div class="mx-auto max-w-5xl"><slot /></div>
-		  </div>
-		
+		<Navbar client:load />
+		<div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10'>
+			<slot />
+		</div>
 	</body>
 </html>
