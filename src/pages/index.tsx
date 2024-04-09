@@ -31,7 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
     if (!response.ok) throw new Error('Failed to fetch collections');
     
     let collections = await response.json();
-    collections.sort((a, b) => a.name.localeCompare(b.name));
+    collections.sort((a: { name: string; }, b: { name: any; }) => a.name.localeCompare(b.name));
 
     return {
       props: {

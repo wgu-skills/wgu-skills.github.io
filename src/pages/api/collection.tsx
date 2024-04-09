@@ -18,14 +18,15 @@ export default async function handler(
     {
       repository(owner: "${owner}", name: "${name}") {
         name
-        owner {
-          login
-        }
-        stargazers {
-          totalCount
-        }
+        nameWithOwner
         description
+        createdAt
+        updatedAt
+        pushedAt
+        archivedAt
         url
+        openGraphImageUrl
+        usesCustomOpenGraphImage
       }
     }
   `
@@ -51,7 +52,7 @@ export default async function handler(
     if (data.errors) {
       throw new Error(
         `Error in GraphQL query: ${data.errors
-          .map((error) => error.message)
+          .map((error: { message: any }) => error.message)
           .join(', ')}`,
       )
     }

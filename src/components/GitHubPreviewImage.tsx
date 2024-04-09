@@ -55,7 +55,7 @@ const GitHubPreviewImage: React.FC<GitHubPreviewImageProps> = ({ repoUrl, repoNa
     };
 
     getPreviewImage();
-  }, [repoUrl]);
+  }, [repoUrl, repoName]);
 
   return (
     <div>
