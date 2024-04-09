@@ -1582,14 +1582,5 @@
     "slug": "web-developers-and-digital-interface-designers",
     "uuid": "a5aa189e-ba42-405e-9ba3-83e177c39c91",
     "repo_url": "https://github.com/wgu-skills/web-developers-and-digital-interface-designers"
-  },
-  {
-    "primary_sector": "primary_sector",
-    "secondary_sector": "secondary_sector",
-    "name": "name",
-    "url": "url",
-    "slug": "name",
-    "uuid": "url",
-    "repo_url": "https://github.com/wgu-skills/name"
   }
 ]

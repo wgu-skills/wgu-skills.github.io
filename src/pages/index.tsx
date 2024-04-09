@@ -14,7 +14,9 @@ const Index: NextPage<IndexProps> = ({ collections = [], error }) => {
       {error ? (
         <p>Error loading collections: {error}</p>
       ) : collections.length > 0 ? (
+        <div className='py-5 px-10'>
         <CollectionsList collections={collections} />
+        </div>
       ) : (
         <p>No collections found.</p>
       )}
