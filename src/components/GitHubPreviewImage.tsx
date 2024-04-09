@@ -62,9 +62,9 @@ const GitHubPreviewImage: React.FC<GitHubPreviewImageProps> = ({ repoUrl, repoNa
       {isPending ? (
         <div>Loading...</div>
       ) : imageUrl ? (
-        <Image src={imageUrl} alt={repoName} width={64} height={64} className="aspect-w-1 aspect-h-1 h-16 w-16 object-cover rounded-full border border-gray-200" />
+        <Image src={imageUrl} alt={repoName} width={256} height={128} className="aspect-w-2 aspect-h-1 w-full h-auto object-cover border border-gray-200" />
       ) : (
-        <Image src={PlaceholderImage} alt="" width={64} height={64} className="aspect-w-1 aspect-h-1 h-16 w-16 object-cover rounded-full border border-gray-200"/>
+        <Image src={PlaceholderImage} alt="" width={256} height={128} className="aspect-w-2 aspect-h-1 w-full h-auto object-cover border border-gray-200"/>
       )}
     </div>
   );

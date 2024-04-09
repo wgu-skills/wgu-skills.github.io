@@ -23,7 +23,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   let collectionData = null;
 
   // Fetch data using the UUID
-  // Here you would fetch data from your database or an API
   try {
     const response = await fetch(`${ NEXT_PUBLIC_API_URL }/api/collection/${uuid}`);
     collectionData = await response.json();

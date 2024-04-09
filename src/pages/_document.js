@@ -7,7 +7,7 @@ class document extends Document {
             <Html>
                 <Head>
                 </Head>
-                <body>
+                <body class="bg-gray-100 dark:bg-slate-900">
                     <Main />
                     <NextScript />
                 </body>

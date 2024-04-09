@@ -1341,15 +1341,6 @@ const osmtCollections = [
       "repo_url": "https://github.com/wgu-skills/detectives-and-criminal-investigators"
     },
     {
-      "primary_sector": "primary_sector",
-      "secondary_sector": "secondary_sector",
-      "name": "name",
-      "url": "url",
-      "slug": "name",
-      "uuid": "url",
-      "repo_url": "https://github.com/wgu-skills/name"
-    },
-    {
       "primary_sector": "Specialty",
       "secondary_sector": "(Not Nested)",
       "name": "Career Readiness: Character, DE&I, & SEL",
