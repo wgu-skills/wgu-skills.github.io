@@ -1,8 +1,10 @@
 import React from 'react';
 import Skill from './Skill';
+import { RichSkillDescriptor } from '../types';
+
 
 interface SkillsListProps {
-    skills: string[];
+    skills: RichSkillDescriptor[];
 }
 
 const SkillsList: React.FC<SkillsListProps> = ({ skills }) => {

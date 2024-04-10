@@ -6,7 +6,7 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'ts', 'tsx'],
   images: {
     domains: ['opengraph.githubassets.com', 'repository-images.githubusercontent.com'],
-  },
+  }
 }
 
 export default withSearch(

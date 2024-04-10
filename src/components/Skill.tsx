@@ -1,13 +1,12 @@
+import { RichSkillDescriptor } from '@/types';
 import React from 'react';
 
 interface SkillProps {
-    skill: {
-        name: string;
-    };
+    skill: RichSkillDescriptor;
 }
 
 const Skill: React.FC<SkillProps> = ({ skill }) => {
-    return <div>{skill.name}</div>;
+    return <div>{skill.skillName}</div>;
 };
 
 export default Skill;

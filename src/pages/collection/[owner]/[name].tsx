@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { GetServerSideProps, NextPage } from 'next'
 import kebabToTitleCase from '@/lib/kebabToTitleCase'
 import GithubIcon from '@/components/icons/GithubIcon'
-import MarkdownRenderer from '@/components/MarkdownRenderer'
 import SkillsList from '@/components/SkillsList'
 
 // Define props type
