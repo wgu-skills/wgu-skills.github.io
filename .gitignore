@@ -40,3 +40,4 @@ next-env.d.ts
 amplifyconfiguration*
 
 *storybook.log
+.env
