@@ -2,6 +2,9 @@ import Link from 'next/link'
 import { GetServerSideProps, NextPage } from 'next'
 import kebabToTitleCase from '@/lib/kebabToTitleCase'
 import GithubIcon from '@/components/icons/GithubIcon'
+import MarkdownRenderer from '@/components/MarkdownRenderer'
+import SkillsList from '@/components/SkillsList'
+
 // Define props type
 interface CollectionPageProps {
   collectionData: any // Replace 'any' with a more specific type for your data
@@ -11,19 +14,30 @@ const CollectionPage: NextPage<CollectionPageProps> = ({ collectionData }) => {
   // You can use the collectionData fetched from your server here
   return (
     <div className="mx-auto flex flex-col space-y-5 py-32 lg:w-2/3">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
         {kebabToTitleCase(collectionData.name)}
       </h1>
       <p>{collectionData.description}</p>
 
+    <div className="flex flex-row space-x-4">
       <Link
         href={collectionData.url}
         aria-label="GitHub"
-        className="inline-flex w-42 items-center justify-center space-x-3 rounded bg-wguBlue p-3 text-white shadow-sm"
+        className="inline-flex w-60 items-center justify-center space-x-3 rounded border border-white bg-slate-900 p-3 text-white shadow-sm"
       >
-        <GithubIcon mode="dark"/>
+        <GithubIcon />
         <span>Github</span>
       </Link>
+      <button
+        className="inline-flex items-center justify-center space-x-3 rounded border border-white bg-slate-900 p-3 text-white shadow-sm"
+        onClick={() => {
+          alert('Coming soon!')
+        }}>
+          npm i @wgu/{collectionData.name}
+        </button>
+        </div>
+
+        <SkillsList skills={collectionData.skills} />
     </div>
   )
 }

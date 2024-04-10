@@ -27,6 +27,11 @@ export default async function handler(
         url
         openGraphImageUrl
         usesCustomOpenGraphImage
+        object(expression: "main:collection.skill.json") {
+          ... on Blob {
+            text
+          }
+        }
       }
     }
   `

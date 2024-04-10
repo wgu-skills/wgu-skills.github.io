@@ -22,11 +22,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       repository(owner: "${owner}", name: "${name}") {
         name
         description
-        object(expression: "HEAD:") {
+        object(expression: "branch-name:") {
           ... on Tree {
             entries {
               name
               type
+              object {
+                ... on Blob {
+                  byteSize
+                }
+              }
             }
           }
         }
